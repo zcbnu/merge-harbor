@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>海风港合成 Merge Harbor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/palette.css"><link rel="stylesheet" href="style.css">
 </head><body>
 <div id="bgBefore" class="bg"></div><div id="bgAfter" class="bg"></div>
+<div id="flash"></div>
 <div id="app">
  <header id="hud">
   <div class="stat"><img src="assets/ui/icon_energy.svg" alt=""><span id="energy">0</span><small id="regen"></small></div>
   <div class="stat"><img src="assets/ui/icon_coin.svg" alt=""><span id="coins">0</span></div>
   <div class="stat"><img src="assets/ui/icon_star.svg" alt=""><span id="stars">0</span></div>
-  <div class="stat lvl">Lv <span id="level">1</span><div class="xpbar"><div id="xpfill"></div></div></div>
+  <div class="stat lvl"><div class="lvltop"><span>Lv</span><span id="level">1</span></div><div class="xpbar"><div id="xpfill"></div></div></div>
+  <button id="muteBtn" aria-label="静音" aria-pressed="false">🔊</button>
  </header>
  <section id="orders"></section>
  <section id="boardwrap"><div id="board"></div></section>

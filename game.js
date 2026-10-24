@@ -91,6 +91,7 @@ function renovate(id) {
   const r = allRenos().find(x => x.id === id);
   if (!r || S.renovations.includes(id) || r.chapter !== S.chapter || S.stars < r.cost_stars) return false;
   S.stars -= r.cost_stars; S.renovations.push(id);
+  SFX.renovate(); bump('stars'); const fl = $('flash'); fl.classList.remove('go'); void fl.offsetWidth; fl.classList.add('go');
   emit('renovate', r);
   showDialogue(r.dialogue);
   const c = chapterOf(S.chapter);
@@ -161,16 +162,68 @@ function renderSel() {
   $('selname').textContent = it ? (it.gen ? `${it.zh}（生成器，点击消耗 ${it.cost} 体力）` : `${it.zh} ${it.en} · ${it.tier} 级${it.next ? '' : '（满级）'}`) : '点击生成器产出物品，拖动两个相同物品合成升级';
   $('sellBtn').disabled = !it || it.gen; $('sellBtn').textContent = it && !it.gen ? `出售 +${it.sell}` : '出售';
 }
+// ---- sound (WebAudio, synthesized) ----
+const MUTE_KEY = 'mergeHarbor.muted';
+let actx = null, muted = localStorage.getItem(MUTE_KEY) === '1';
+function tone(freq, dur = 0.12, type = 'sine', vol = 0.18, delay = 0, slide = 0) {
+  if (muted) return;
+  try {
+    actx = actx || new (window.AudioContext || window.webkitAudioContext)();
+    if (actx.state === 'suspended') actx.resume();
+    const t = actx.currentTime + delay, o = actx.createOscillator(), g = actx.createGain();
+    o.type = type; o.frequency.setValueAtTime(freq, t); if (slide) o.frequency.exponentialRampToValueAtTime(freq * slide, t + dur);
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + 0.01); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g).connect(actx.destination); o.start(t); o.stop(t + dur + 0.02);
+  } catch (e) {}
+}
+const SFX = {
+  spawn: () => tone(520, 0.1, 'triangle', 0.15, 0, 1.5),
+  merge: tier => { const f = 330 * Math.pow(2, (tier - 1) / 6); tone(f, 0.12, 'sine', 0.2); tone(f * 1.5, 0.16, 'sine', 0.14, 0.06); },
+  deliver: () => [523, 659, 784].forEach((f, i) => tone(f, 0.14, 'triangle', 0.16, i * 0.07)),
+  level: () => [523, 659, 784, 1047].forEach((f, i) => tone(f, 0.2, 'square', 0.08, i * 0.09)),
+  renovate: () => { tone(196, 0.3, 'sawtooth', 0.06, 0, 2); [784, 988, 1175].forEach((f, i) => tone(f, 0.25, 'sine', 0.12, 0.15 + i * 0.08)); },
+  deny: () => tone(160, 0.12, 'square', 0.06),
+};
+function setMuted(m) { muted = m; localStorage.setItem(MUTE_KEY, m ? '1' : '0'); $('muteBtn').textContent = m ? '🔇' : '🔊'; $('muteBtn').setAttribute('aria-pressed', m); }
+
+// ---- animation helpers ----
+const cellEl = i => $('board').children[i];
+function fly(src, fromRect, toEl, dur = 420) {
+  if (!fromRect || !toEl) return; const to = toEl.getBoundingClientRect();
+  const g = document.createElement('img'); g.src = src; g.className = 'flyer';
+  const sz = Math.min(fromRect.width, 64); Object.assign(g.style, { left: fromRect.left + (fromRect.width - sz) / 2 + 'px', top: fromRect.top + (fromRect.height - sz) / 2 + 'px', width: sz + 'px', height: sz + 'px' });
+  document.body.appendChild(g);
+  const dx = to.left + to.width / 2 - (fromRect.left + fromRect.width / 2), dy = to.top + to.height / 2 - (fromRect.top + fromRect.height / 2);
+  const a = g.animate([{ transform: 'translate(0,0) scale(1)', opacity: 1 }, { transform: `translate(${dx}px,${dy}px) scale(.5)`, opacity: .6 }], { duration: dur, easing: 'cubic-bezier(.5,-.3,.6,1)' });
+  a.onfinish = () => g.remove();
+}
+function sparkle(i) {
+  const c = cellEl(i); if (!c) return;
+  for (let k = 0; k < 8; k++) { const s = document.createElement('i'); s.className = 'spark'; const ang = k / 8 * Math.PI * 2;
+    s.style.setProperty('--dx', Math.cos(ang) * 34 + 'px'); s.style.setProperty('--dy', Math.sin(ang) * 34 + 'px'); c.appendChild(s); setTimeout(() => s.remove(), 600); }
+}
+function bump(id) { const el = $(id).closest('.stat'); el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }
+function spawnIn(from, to) {
+  const c = cellEl(to), it = c && c.querySelector('.item'); if (!it) return;
+  const a = cellEl(from).getBoundingClientRect(), b = c.getBoundingClientRect();
+  it.animate([{ transform: `translate(${a.left - b.left}px,${a.top - b.top}px) scale(.4)`, opacity: .3 }, { transform: 'none', opacity: 1 }], { duration: 300, easing: 'cubic-bezier(.3,1.4,.6,1)' });
+}
+function hintTargets(i) {
+  [...$('board').children].forEach(c => c.classList.remove('hint'));
+  const v = S.board[i]; if (!v || ITEMS[v].gen || !ITEMS[v].next) return;
+  S.board.forEach((w, j) => w === v && j !== i && cellEl(j).classList.add('hint'));
+}
+
 function pop(i) { const c = $('board').children[i]; c && c.querySelector('.item') && c.querySelector('.item').classList.add('pop'); }
 
 // ---- actions ----
 function tapGenerator(i) {
   const g = ITEMS[S.board[i]];
-  if (S.energy < g.cost) return toast('体力不足，稍等恢复');
-  const empty = nearestEmpty(i); if (empty < 0) return toast('棋盘已满');
+  if (S.energy < g.cost) { SFX.deny(); return toast('体力不足，稍等恢复'); }
+  const empty = nearestEmpty(i); if (empty < 0) { SFX.deny(); return toast('棋盘已满'); }
   S.energy -= g.cost; if (S.energy < MAX_ENERGY && S.energy + g.cost >= MAX_ENERGY) S.lastRegen = Date.now();
   S.board[empty] = (Math.random() < 0.15 && g.second) ? g.second : g.first;
-  save(); renderAll(); pop(empty);
+  save(); renderAll(); spawnIn(i, empty); SFX.spawn();
 }
 function nearestEmpty(from) {
   const fx = from % COLS, fy = (from / COLS) | 0; let best = -1, bd = 1e9;
@@ -184,18 +237,20 @@ function move(a, b) {
   if (A === B && !ITEMS[A].gen && ITEMS[A].next) {
     S.board[a] = null; S.board[b] = ITEMS[A].next; addXp(1);
     emit('merged', { from: A, to: ITEMS[A].next, cell: b });
-    sel = b; save(); renderAll(); pop(b); return 'merge';
+    sel = b; save(); renderAll(); pop(b); sparkle(b); SFX.merge(ITEMS[S.board[b]].tier); hintTargets(b); return 'merge';
   }
   S.board[a] = B; S.board[b] = A; sel = b; save(); renderAll(); return 'swap';
 }
 function addXp(n) {
   S.xp += n;
-  while (S.xp >= xpNeed(S.level)) { S.xp -= xpNeed(S.level); S.level++; S.energy = Math.min(MAX_ENERGY, S.energy + 10); toast('升级！Lv ' + S.level + '，体力 +10'); emit('levelUp', S.level); }
+  while (S.xp >= xpNeed(S.level)) { S.xp -= xpNeed(S.level); S.level++; S.energy = Math.min(MAX_ENERGY, S.energy + 10); toast('升级！Lv ' + S.level + '，体力 +10'); SFX.level(); setTimeout(() => bump('level'), 0); emit('levelUp', S.level); }
 }
 function complete(slot) {
   const o = ORDERS[S.active[slot]]; if (!o || !canFulfill(o)) return;
-  const need = reqsOf(o);
-  for (const k in need) for (let n = need[k], j = N - 1; j >= 0 && n > 0; j--) if (S.board[j] === k) { S.board[j] = null; n--; }
+  const need = reqsOf(o), card = $('orders').children[slot], flights = [];
+  for (const k in need) for (let n = need[k], j = N - 1; j >= 0 && n > 0; j--) if (S.board[j] === k) { flights.push([ITEMS[k].asset, cellEl(j).getBoundingClientRect()]); S.board[j] = null; n--; }
+  flights.forEach(([src, r], k) => setTimeout(() => fly(src, r, card), k * 60));
+  SFX.deliver(); setTimeout(() => { bump('coins'); if (o.reward.stars) bump('stars'); }, 420);
   S.coins += o.reward.coins; S.stars += o.reward.stars || 0; addXp(o.reward.xp);
   S.done.push(o.id);
   S.active.splice(slot, 1); fillOrders(S);
@@ -225,7 +280,7 @@ function onUp(e) {
   if (d.moved) { const t = cellAt(e.clientX, e.clientY); if (t >= 0 && move(d.i, t)) return; renderAll(); return; }
   const id = S.board[d.i];
   if (id && ITEMS[id].gen) { if (sel === d.i) tapGenerator(d.i); else { sel = d.i; tapGenerator(d.i); } return; }
-  sel = d.i; renderBoard(); renderSel();
+  sel = d.i; renderBoard(); renderSel(); hintTargets(d.i);
 }
 
 async function init() {
@@ -237,6 +292,7 @@ async function init() {
   window.addEventListener('pointermove', onMove);
   window.addEventListener('pointerup', onUp);
   $('sellBtn').onclick = sell;
+  setMuted(muted); $('muteBtn').onclick = () => { setMuted(!muted); if (!muted) SFX.spawn(); };
   $('resetBtn').onclick = () => { if (confirm('确定重置存档？')) { localStorage.removeItem(SAVE_KEY); S = newState(); sel = -1; renderAll(); save(); chapterIntro(1); } };
   $('renoBtn').onclick = () => { renderReno(); $('renoPanel').classList.add('show'); };
   $('renoClose').onclick = () => $('renoPanel').classList.remove('show');
@@ -249,5 +305,5 @@ async function init() {
   save();
 }
 // public API for tests and the future story/renovation module
-window.MH = { hooks, get state() { return S; }, items: () => ITEMS, story: () => STORY, move, tapGenerator, complete, renovate, showDialogue, save, ready: init() };
+window.MH = { hooks, get state() { return S; }, items: () => ITEMS, story: () => STORY, move, tapGenerator, sfx: SFX, isMuted: () => muted, complete, renovate, showDialogue, save, ready: init() };
 })();
