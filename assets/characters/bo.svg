@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><rect width="256" height="256" rx="32" fill="#EDD2C4"/>
+<path d="M48 256 q0 -70 80 -70 q80 0 80 70z" fill="#C46A3B"/><rect x="112" y="160" width="32" height="32" fill="#D9A47A"/>
+<ellipse cx="128" cy="116" rx="52" ry="58" fill="#D9A47A"/>
+<path d="M74 110 q0 -66 54 -66 q54 0 54 66 q-20 -30 -54 -34 q-34 4 -54 34z" fill="#DADADA"/>
+<circle cx="108" cy="122" r="6" fill="#2B2B3A"/><circle cx="148" cy="122" r="6" fill="#2B2B3A"/>
+<path d="M112 148 q16 12 32 0" stroke="#8A3B3B" stroke-width="4" fill="none" stroke-linecap="round"/>
+<circle cx="96" cy="138" r="7" fill="#F29A9A" opacity=".5"/><circle cx="160" cy="138" r="7" fill="#F29A9A" opacity=".5"/>
+<rect x="68" y="214" width="120" height="30" rx="15" fill="#FFF8E7"/><text x="128" y="235" font-family="'Baloo 2','Noto Sans SC',sans-serif" font-size="18" text-anchor="middle" fill="#2B2B3A" font-weight="bold">老渔夫阿博</text></svg>

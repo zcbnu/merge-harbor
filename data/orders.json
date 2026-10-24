@@ -1,0 +1,665 @@
+{
+  "orders": [
+    {
+      "id": "o01",
+      "character": "lan",
+      "chapter": 1,
+      "required": [
+        {
+          "item": "shell_2",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 10,
+        "xp": 5,
+        "stars": 1
+      },
+      "text_zh": "我需要这些来做修缮样板。要小贝壳。",
+      "text_en": "I need these for a repair mock-up. I need: Small Shell."
+    },
+    {
+      "id": "o02",
+      "character": "bo",
+      "chapter": 1,
+      "required": [
+        {
+          "item": "tool_3",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 20,
+        "xp": 5,
+        "stars": 1
+      },
+      "text_zh": "别磨蹭，鱼可不等人。要锤子。",
+      "text_en": "Don't dawdle, the fish won't wait. I need: Hammer."
+    },
+    {
+      "id": "o03",
+      "character": "mei",
+      "chapter": 1,
+      "required": [
+        {
+          "item": "tea_2",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 10,
+        "xp": 5,
+        "stars": 1
+      },
+      "text_zh": "茶馆今晚有客人，帮帮忙？要茶包。",
+      "text_en": "Guests at the teahouse tonight—help me out? I need: Tea Bag."
+    },
+    {
+      "id": "o04",
+      "character": "jun",
+      "chapter": 1,
+      "required": [
+        {
+          "item": "fish_2",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 10,
+        "xp": 5,
+        "stars": 1
+      },
+      "text_zh": "……这是工作需要。要沙丁鱼。",
+      "text_en": "...It's for work. I need: Sardine."
+    },
+    {
+      "id": "o05",
+      "character": "nana",
+      "chapter": 1,
+      "required": [
+        {
+          "item": "flower_3",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 20,
+        "xp": 5,
+        "stars": 1
+      },
+      "text_zh": "拜托啦，烤箱已经预热好了！要雏菊。",
+      "text_en": "Please! The oven's already hot! I need: Daisy."
+    },
+    {
+      "id": "o06",
+      "character": "lan",
+      "chapter": 1,
+      "required": [
+        {
+          "item": "tool_3",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 20,
+        "xp": 5,
+        "stars": 1
+      },
+      "text_zh": "我需要这些来做修缮样板。要锤子。",
+      "text_en": "I need these for a repair mock-up. I need: Hammer."
+    },
+    {
+      "id": "o07",
+      "character": "bo",
+      "chapter": 1,
+      "required": [
+        {
+          "item": "fish_2",
+          "count": 1
+        },
+        {
+          "item": "fish_3",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 30,
+        "xp": 10,
+        "stars": 1
+      },
+      "text_zh": "别磨蹭，鱼可不等人。要沙丁鱼、鲭鱼。",
+      "text_en": "Don't dawdle, the fish won't wait. I need: Sardine, Mackerel."
+    },
+    {
+      "id": "o08",
+      "character": "mei",
+      "chapter": 1,
+      "required": [
+        {
+          "item": "flower_2",
+          "count": 1
+        },
+        {
+          "item": "tea_2",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 20,
+        "xp": 10,
+        "stars": 1
+      },
+      "text_zh": "茶馆今晚有客人，帮帮忙？要嫩芽、茶包。",
+      "text_en": "Guests at the teahouse tonight—help me out? I need: Sprout, Tea Bag."
+    },
+    {
+      "id": "o09",
+      "character": "jun",
+      "chapter": 1,
+      "required": [
+        {
+          "item": "fish_3",
+          "count": 1
+        },
+        {
+          "item": "tea_4",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 60,
+        "xp": 10,
+        "stars": 1
+      },
+      "text_zh": "……这是工作需要。要鲭鱼、奶茶。",
+      "text_en": "...It's for work. I need: Mackerel, Milk Tea."
+    },
+    {
+      "id": "o10",
+      "character": "nana",
+      "chapter": 1,
+      "required": [
+        {
+          "item": "bake_2",
+          "count": 1
+        },
+        {
+          "item": "bake_4",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 50,
+        "xp": 10,
+        "stars": 1
+      },
+      "text_zh": "拜托啦，烤箱已经预热好了！要面团、牛角包。",
+      "text_en": "Please! The oven's already hot! I need: Dough, Croissant."
+    },
+    {
+      "id": "o11",
+      "character": "lan",
+      "chapter": 2,
+      "required": [
+        {
+          "item": "flower_3",
+          "count": 1
+        },
+        {
+          "item": "tool_2",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 30,
+        "xp": 10,
+        "stars": 1
+      },
+      "text_zh": "我需要这些来做修缮样板。要雏菊、螺丝。",
+      "text_en": "I need these for a repair mock-up. I need: Daisy, Screw."
+    },
+    {
+      "id": "o12",
+      "character": "bo",
+      "chapter": 2,
+      "required": [
+        {
+          "item": "fish_4",
+          "count": 1
+        },
+        {
+          "item": "fish_3",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 60,
+        "xp": 10,
+        "stars": 1
+      },
+      "text_zh": "别磨蹭，鱼可不等人。要鲈鱼、鲭鱼。",
+      "text_en": "Don't dawdle, the fish won't wait. I need: Sea Bass, Mackerel."
+    },
+    {
+      "id": "o13",
+      "character": "mei",
+      "chapter": 2,
+      "required": [
+        {
+          "item": "flower_3",
+          "count": 1
+        },
+        {
+          "item": "bake_3",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 40,
+        "xp": 15,
+        "stars": 1
+      },
+      "text_zh": "茶馆今晚有客人，帮帮忙？要雏菊、小圆面包。",
+      "text_en": "Guests at the teahouse tonight—help me out? I need: Daisy, Bun."
+    },
+    {
+      "id": "o14",
+      "character": "jun",
+      "chapter": 2,
+      "required": [
+        {
+          "item": "fish_4",
+          "count": 1
+        },
+        {
+          "item": "fish_5",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 120,
+        "xp": 15,
+        "stars": 1
+      },
+      "text_zh": "……这是工作需要。要鲈鱼、三文鱼。",
+      "text_en": "...It's for work. I need: Sea Bass, Salmon."
+    },
+    {
+      "id": "o15",
+      "character": "nana",
+      "chapter": 2,
+      "required": [
+        {
+          "item": "bake_3",
+          "count": 1
+        },
+        {
+          "item": "bake_4",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 60,
+        "xp": 15,
+        "stars": 1
+      },
+      "text_zh": "拜托啦，烤箱已经预热好了！要小圆面包、牛角包。",
+      "text_en": "Please! The oven's already hot! I need: Bun, Croissant."
+    },
+    {
+      "id": "o16",
+      "character": "lan",
+      "chapter": 2,
+      "required": [
+        {
+          "item": "tool_5",
+          "count": 1
+        },
+        {
+          "item": "flower_3",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 100,
+        "xp": 15,
+        "stars": 1
+      },
+      "text_zh": "我需要这些来做修缮样板。要锯子、雏菊。",
+      "text_en": "I need these for a repair mock-up. I need: Saw, Daisy."
+    },
+    {
+      "id": "o17",
+      "character": "bo",
+      "chapter": 2,
+      "required": [
+        {
+          "item": "fish_5",
+          "count": 1
+        },
+        {
+          "item": "fish_4",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 120,
+        "xp": 15,
+        "stars": 1
+      },
+      "text_zh": "别磨蹭，鱼可不等人。要三文鱼、鲈鱼。",
+      "text_en": "Don't dawdle, the fish won't wait. I need: Salmon, Sea Bass."
+    },
+    {
+      "id": "o18",
+      "character": "mei",
+      "chapter": 2,
+      "required": [
+        {
+          "item": "bake_5",
+          "count": 1
+        },
+        {
+          "item": "flower_4",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 120,
+        "xp": 15,
+        "stars": 1
+      },
+      "text_zh": "茶馆今晚有客人，帮帮忙？要水果挞、郁金香。",
+      "text_en": "Guests at the teahouse tonight—help me out? I need: Fruit Tart, Tulip."
+    },
+    {
+      "id": "o19",
+      "character": "jun",
+      "chapter": 2,
+      "required": [
+        {
+          "item": "shell_6",
+          "count": 1
+        },
+        {
+          "item": "shell_5",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 240,
+        "xp": 20,
+        "stars": 1
+      },
+      "text_zh": "……这是工作需要。要珍珠项链、珍珠。",
+      "text_en": "...It's for work. I need: Pearl Necklace, Pearl."
+    },
+    {
+      "id": "o20",
+      "character": "nana",
+      "chapter": 2,
+      "required": [
+        {
+          "item": "flower_4",
+          "count": 1
+        },
+        {
+          "item": "bake_6",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 200,
+        "xp": 20,
+        "stars": 1
+      },
+      "text_zh": "拜托啦，烤箱已经预热好了！要郁金香、奶油蛋糕。",
+      "text_en": "Please! The oven's already hot! I need: Tulip, Cream Cake."
+    },
+    {
+      "id": "o21",
+      "character": "lan",
+      "chapter": 3,
+      "required": [
+        {
+          "item": "tool_4",
+          "count": 1
+        },
+        {
+          "item": "flower_5",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 120,
+        "xp": 20,
+        "stars": 1
+      },
+      "text_zh": "我需要这些来做修缮样板。要扳手、玫瑰。",
+      "text_en": "I need these for a repair mock-up. I need: Wrench, Rose."
+    },
+    {
+      "id": "o22",
+      "character": "bo",
+      "chapter": 3,
+      "required": [
+        {
+          "item": "tool_5",
+          "count": 1
+        },
+        {
+          "item": "tool_5",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 160,
+        "xp": 20,
+        "stars": 1
+      },
+      "text_zh": "别磨蹭，鱼可不等人。要锯子、锯子。",
+      "text_en": "Don't dawdle, the fish won't wait. I need: Saw, Saw."
+    },
+    {
+      "id": "o23",
+      "character": "mei",
+      "chapter": 3,
+      "required": [
+        {
+          "item": "bake_4",
+          "count": 1
+        },
+        {
+          "item": "tea_6",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 200,
+        "xp": 20,
+        "stars": 1
+      },
+      "text_zh": "茶馆今晚有客人，帮帮忙？要牛角包、茶点套装。",
+      "text_en": "Guests at the teahouse tonight—help me out? I need: Croissant, Tea Set."
+    },
+    {
+      "id": "o24",
+      "character": "jun",
+      "chapter": 3,
+      "required": [
+        {
+          "item": "shell_4",
+          "count": 1
+        },
+        {
+          "item": "shell_4",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 80,
+        "xp": 20,
+        "stars": 1
+      },
+      "text_zh": "……这是工作需要。要海螺、海螺。",
+      "text_en": "...It's for work. I need: Conch, Conch."
+    },
+    {
+      "id": "o25",
+      "character": "nana",
+      "chapter": 3,
+      "required": [
+        {
+          "item": "flower_6",
+          "count": 1
+        },
+        {
+          "item": "bake_7",
+          "count": 1
+        },
+        {
+          "item": "bake_7",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 800,
+        "xp": 25,
+        "stars": 1
+      },
+      "text_zh": "拜托啦，烤箱已经预热好了！要花束、三层婚礼蛋糕、三层婚礼蛋糕。",
+      "text_en": "Please! The oven's already hot! I need: Bouquet, Tiered Cake, Tiered Cake."
+    },
+    {
+      "id": "o26",
+      "character": "lan",
+      "chapter": 3,
+      "required": [
+        {
+          "item": "flower_6",
+          "count": 1
+        },
+        {
+          "item": "shell_7",
+          "count": 1
+        },
+        {
+          "item": "shell_7",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 800,
+        "xp": 25,
+        "stars": 1
+      },
+      "text_zh": "我需要这些来做修缮样板。要花束、珊瑚王冠、珊瑚王冠。",
+      "text_en": "I need these for a repair mock-up. I need: Bouquet, Coral Crown, Coral Crown."
+    },
+    {
+      "id": "o27",
+      "character": "bo",
+      "chapter": 3,
+      "required": [
+        {
+          "item": "tool_7",
+          "count": 1
+        },
+        {
+          "item": "tool_5",
+          "count": 1
+        },
+        {
+          "item": "fish_6",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 560,
+        "xp": 25,
+        "stars": 1
+      },
+      "text_zh": "别磨蹭，鱼可不等人。要工作台、锯子、金枪鱼。",
+      "text_en": "Don't dawdle, the fish won't wait. I need: Workbench, Saw, Tuna."
+    },
+    {
+      "id": "o28",
+      "character": "mei",
+      "chapter": 3,
+      "required": [
+        {
+          "item": "flower_7",
+          "count": 1
+        },
+        {
+          "item": "bake_5",
+          "count": 1
+        },
+        {
+          "item": "tea_7",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 720,
+        "xp": 25,
+        "stars": 1
+      },
+      "text_zh": "茶馆今晚有客人，帮帮忙？要花篮、水果挞、海港下午茶。",
+      "text_en": "Guests at the teahouse tonight—help me out? I need: Flower Basket, Fruit Tart, Harbor High Tea."
+    },
+    {
+      "id": "o29",
+      "character": "jun",
+      "chapter": 3,
+      "required": [
+        {
+          "item": "fish_6",
+          "count": 1
+        },
+        {
+          "item": "fish_7",
+          "count": 1
+        },
+        {
+          "item": "fish_6",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 640,
+        "xp": 25,
+        "stars": 1
+      },
+      "text_zh": "……这是工作需要。要金枪鱼、海鲜拼盘、金枪鱼。",
+      "text_en": "...It's for work. I need: Tuna, Seafood Platter, Tuna."
+    },
+    {
+      "id": "o30",
+      "character": "nana",
+      "chapter": 3,
+      "required": [
+        {
+          "item": "flower_7",
+          "count": 1
+        },
+        {
+          "item": "flower_7",
+          "count": 1
+        },
+        {
+          "item": "flower_5",
+          "count": 1
+        }
+      ],
+      "reward": {
+        "coins": 720,
+        "xp": 25,
+        "stars": 1
+      },
+      "text_zh": "拜托啦，烤箱已经预热好了！要花篮、花篮、玫瑰。",
+      "text_en": "Please! The oven's already hot! I need: Flower Basket, Flower Basket, Rose."
+    }
+  ],
+  "notes": "stars are spent on renovation steps in story.json Balance v2: every order gives 1 star (30 total) vs 27 renovation stars; no level-up star bonus needed."
+}

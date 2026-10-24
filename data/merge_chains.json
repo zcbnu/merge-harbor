@@ -1,0 +1,459 @@
+{
+  "version": 1,
+  "rules": {
+    "merge": "two identical items of tier N -> one item of tier N+1",
+    "generator_energy_cost": 1,
+    "generator_drops": "tier 1 (85%) or tier 2 (15%)",
+    "max_tier_cannot_merge": true
+  },
+  "chains": [
+    {
+      "id": "fish",
+      "zh": "渔获",
+      "en": "Catch",
+      "color": "#3B8EC4",
+      "generator": {
+        "id": "fish_gen",
+        "zh": "旧渔网",
+        "en": "Old Fishing Net",
+        "asset": "art/items/fish_gen.svg",
+        "energy_cost": 1,
+        "cooldown_sec": 0
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "id": "fish_1",
+          "zh": "小虾",
+          "en": "Shrimp",
+          "sell_coins": 1,
+          "asset": "art/items/fish_1.svg"
+        },
+        {
+          "tier": 2,
+          "id": "fish_2",
+          "zh": "沙丁鱼",
+          "en": "Sardine",
+          "sell_coins": 2,
+          "asset": "art/items/fish_2.svg"
+        },
+        {
+          "tier": 3,
+          "id": "fish_3",
+          "zh": "鲭鱼",
+          "en": "Mackerel",
+          "sell_coins": 4,
+          "asset": "art/items/fish_3.svg"
+        },
+        {
+          "tier": 4,
+          "id": "fish_4",
+          "zh": "鲈鱼",
+          "en": "Sea Bass",
+          "sell_coins": 8,
+          "asset": "art/items/fish_4.svg"
+        },
+        {
+          "tier": 5,
+          "id": "fish_5",
+          "zh": "三文鱼",
+          "en": "Salmon",
+          "sell_coins": 16,
+          "asset": "art/items/fish_5.svg"
+        },
+        {
+          "tier": 6,
+          "id": "fish_6",
+          "zh": "金枪鱼",
+          "en": "Tuna",
+          "sell_coins": 32,
+          "asset": "art/items/fish_6.svg"
+        },
+        {
+          "tier": 7,
+          "id": "fish_7",
+          "zh": "海鲜拼盘",
+          "en": "Seafood Platter",
+          "sell_coins": 64,
+          "asset": "art/items/fish_7.svg"
+        },
+        {
+          "tier": 8,
+          "id": "fish_8",
+          "zh": "灯塔大鱼宴",
+          "en": "Lighthouse Feast",
+          "sell_coins": 128,
+          "asset": "art/items/fish_8.svg"
+        }
+      ]
+    },
+    {
+      "id": "tea",
+      "zh": "茶饮",
+      "en": "Tea",
+      "color": "#7BAF5A",
+      "generator": {
+        "id": "tea_gen",
+        "zh": "铜茶壶",
+        "en": "Copper Kettle",
+        "asset": "art/items/tea_gen.svg",
+        "energy_cost": 1,
+        "cooldown_sec": 0
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "id": "tea_1",
+          "zh": "茶叶",
+          "en": "Tea Leaf",
+          "sell_coins": 1,
+          "asset": "art/items/tea_1.svg"
+        },
+        {
+          "tier": 2,
+          "id": "tea_2",
+          "zh": "茶包",
+          "en": "Tea Bag",
+          "sell_coins": 2,
+          "asset": "art/items/tea_2.svg"
+        },
+        {
+          "tier": 3,
+          "id": "tea_3",
+          "zh": "热茶",
+          "en": "Hot Tea",
+          "sell_coins": 4,
+          "asset": "art/items/tea_3.svg"
+        },
+        {
+          "tier": 4,
+          "id": "tea_4",
+          "zh": "奶茶",
+          "en": "Milk Tea",
+          "sell_coins": 8,
+          "asset": "art/items/tea_4.svg"
+        },
+        {
+          "tier": 5,
+          "id": "tea_5",
+          "zh": "花果茶",
+          "en": "Fruit Tea",
+          "sell_coins": 16,
+          "asset": "art/items/tea_5.svg"
+        },
+        {
+          "tier": 6,
+          "id": "tea_6",
+          "zh": "茶点套装",
+          "en": "Tea Set",
+          "sell_coins": 32,
+          "asset": "art/items/tea_6.svg"
+        },
+        {
+          "tier": 7,
+          "id": "tea_7",
+          "zh": "海港下午茶",
+          "en": "Harbor High Tea",
+          "sell_coins": 64,
+          "asset": "art/items/tea_7.svg"
+        }
+      ]
+    },
+    {
+      "id": "bake",
+      "zh": "烘焙",
+      "en": "Bakery",
+      "color": "#D99A4E",
+      "generator": {
+        "id": "bake_gen",
+        "zh": "砖砌烤炉",
+        "en": "Brick Oven",
+        "asset": "art/items/bake_gen.svg",
+        "energy_cost": 1,
+        "cooldown_sec": 0
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "id": "bake_1",
+          "zh": "面粉",
+          "en": "Flour",
+          "sell_coins": 1,
+          "asset": "art/items/bake_1.svg"
+        },
+        {
+          "tier": 2,
+          "id": "bake_2",
+          "zh": "面团",
+          "en": "Dough",
+          "sell_coins": 2,
+          "asset": "art/items/bake_2.svg"
+        },
+        {
+          "tier": 3,
+          "id": "bake_3",
+          "zh": "小圆面包",
+          "en": "Bun",
+          "sell_coins": 4,
+          "asset": "art/items/bake_3.svg"
+        },
+        {
+          "tier": 4,
+          "id": "bake_4",
+          "zh": "牛角包",
+          "en": "Croissant",
+          "sell_coins": 8,
+          "asset": "art/items/bake_4.svg"
+        },
+        {
+          "tier": 5,
+          "id": "bake_5",
+          "zh": "水果挞",
+          "en": "Fruit Tart",
+          "sell_coins": 16,
+          "asset": "art/items/bake_5.svg"
+        },
+        {
+          "tier": 6,
+          "id": "bake_6",
+          "zh": "奶油蛋糕",
+          "en": "Cream Cake",
+          "sell_coins": 32,
+          "asset": "art/items/bake_6.svg"
+        },
+        {
+          "tier": 7,
+          "id": "bake_7",
+          "zh": "三层婚礼蛋糕",
+          "en": "Tiered Cake",
+          "sell_coins": 64,
+          "asset": "art/items/bake_7.svg"
+        }
+      ]
+    },
+    {
+      "id": "flower",
+      "zh": "花艺",
+      "en": "Flowers",
+      "color": "#E07A9A",
+      "generator": {
+        "id": "flower_gen",
+        "zh": "花车",
+        "en": "Flower Cart",
+        "asset": "art/items/flower_gen.svg",
+        "energy_cost": 1,
+        "cooldown_sec": 0
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "id": "flower_1",
+          "zh": "种子",
+          "en": "Seed",
+          "sell_coins": 1,
+          "asset": "art/items/flower_1.svg"
+        },
+        {
+          "tier": 2,
+          "id": "flower_2",
+          "zh": "嫩芽",
+          "en": "Sprout",
+          "sell_coins": 2,
+          "asset": "art/items/flower_2.svg"
+        },
+        {
+          "tier": 3,
+          "id": "flower_3",
+          "zh": "雏菊",
+          "en": "Daisy",
+          "sell_coins": 4,
+          "asset": "art/items/flower_3.svg"
+        },
+        {
+          "tier": 4,
+          "id": "flower_4",
+          "zh": "郁金香",
+          "en": "Tulip",
+          "sell_coins": 8,
+          "asset": "art/items/flower_4.svg"
+        },
+        {
+          "tier": 5,
+          "id": "flower_5",
+          "zh": "玫瑰",
+          "en": "Rose",
+          "sell_coins": 16,
+          "asset": "art/items/flower_5.svg"
+        },
+        {
+          "tier": 6,
+          "id": "flower_6",
+          "zh": "花束",
+          "en": "Bouquet",
+          "sell_coins": 32,
+          "asset": "art/items/flower_6.svg"
+        },
+        {
+          "tier": 7,
+          "id": "flower_7",
+          "zh": "花篮",
+          "en": "Flower Basket",
+          "sell_coins": 64,
+          "asset": "art/items/flower_7.svg"
+        },
+        {
+          "tier": 8,
+          "id": "flower_8",
+          "zh": "花拱门",
+          "en": "Flower Arch",
+          "sell_coins": 128,
+          "asset": "art/items/flower_8.svg"
+        }
+      ]
+    },
+    {
+      "id": "tool",
+      "zh": "工具",
+      "en": "Tools",
+      "color": "#8A7F74",
+      "generator": {
+        "id": "tool_gen",
+        "zh": "工具箱",
+        "en": "Toolbox",
+        "asset": "art/items/tool_gen.svg",
+        "energy_cost": 1,
+        "cooldown_sec": 0
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "id": "tool_1",
+          "zh": "钉子",
+          "en": "Nail",
+          "sell_coins": 1,
+          "asset": "art/items/tool_1.svg"
+        },
+        {
+          "tier": 2,
+          "id": "tool_2",
+          "zh": "螺丝",
+          "en": "Screw",
+          "sell_coins": 2,
+          "asset": "art/items/tool_2.svg"
+        },
+        {
+          "tier": 3,
+          "id": "tool_3",
+          "zh": "锤子",
+          "en": "Hammer",
+          "sell_coins": 4,
+          "asset": "art/items/tool_3.svg"
+        },
+        {
+          "tier": 4,
+          "id": "tool_4",
+          "zh": "扳手",
+          "en": "Wrench",
+          "sell_coins": 8,
+          "asset": "art/items/tool_4.svg"
+        },
+        {
+          "tier": 5,
+          "id": "tool_5",
+          "zh": "锯子",
+          "en": "Saw",
+          "sell_coins": 16,
+          "asset": "art/items/tool_5.svg"
+        },
+        {
+          "tier": 6,
+          "id": "tool_6",
+          "zh": "工具腰带",
+          "en": "Tool Belt",
+          "sell_coins": 32,
+          "asset": "art/items/tool_6.svg"
+        },
+        {
+          "tier": 7,
+          "id": "tool_7",
+          "zh": "工作台",
+          "en": "Workbench",
+          "sell_coins": 64,
+          "asset": "art/items/tool_7.svg"
+        }
+      ]
+    },
+    {
+      "id": "shell",
+      "zh": "贝壳",
+      "en": "Shells",
+      "color": "#5FC1B8",
+      "generator": {
+        "id": "shell_gen",
+        "zh": "潮汐池",
+        "en": "Tide Pool",
+        "asset": "art/items/shell_gen.svg",
+        "energy_cost": 1,
+        "cooldown_sec": 0
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "id": "shell_1",
+          "zh": "沙粒",
+          "en": "Sand",
+          "sell_coins": 1,
+          "asset": "art/items/shell_1.svg"
+        },
+        {
+          "tier": 2,
+          "id": "shell_2",
+          "zh": "小贝壳",
+          "en": "Small Shell",
+          "sell_coins": 2,
+          "asset": "art/items/shell_2.svg"
+        },
+        {
+          "tier": 3,
+          "id": "shell_3",
+          "zh": "扇贝",
+          "en": "Scallop",
+          "sell_coins": 4,
+          "asset": "art/items/shell_3.svg"
+        },
+        {
+          "tier": 4,
+          "id": "shell_4",
+          "zh": "海螺",
+          "en": "Conch",
+          "sell_coins": 8,
+          "asset": "art/items/shell_4.svg"
+        },
+        {
+          "tier": 5,
+          "id": "shell_5",
+          "zh": "珍珠",
+          "en": "Pearl",
+          "sell_coins": 16,
+          "asset": "art/items/shell_5.svg"
+        },
+        {
+          "tier": 6,
+          "id": "shell_6",
+          "zh": "珍珠项链",
+          "en": "Pearl Necklace",
+          "sell_coins": 32,
+          "asset": "art/items/shell_6.svg"
+        },
+        {
+          "tier": 7,
+          "id": "shell_7",
+          "zh": "珊瑚王冠",
+          "en": "Coral Crown",
+          "sell_coins": 64,
+          "asset": "art/items/shell_7.svg"
+        }
+      ]
+    }
+  ]
+}

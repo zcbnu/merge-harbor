@@ -1,0 +1,59 @@
+{
+  "characters": [
+    {
+      "id": "lan",
+      "zh": "林岚",
+      "en": "Lan Lin",
+      "role_zh": "主角，回到故乡接手旧港口的年轻建筑师",
+      "role_en": "Protagonist, a young architect returning home to restore the old harbor",
+      "color": "#3B6EA5",
+      "bio_zh": "林岚在大城市做了五年设计，却在外婆去世后收到一封信：海风港的老码头要被拆除。她决定留下来，用合成与修缮让港口重新热闹。",
+      "bio_en": "After five years designing in the big city, Lan receives a letter after her grandmother passes: Breezeport's old pier is to be demolished. She stays to rebuild it, one merge and one repair at a time.",
+      "portrait": "art/characters/lan.svg"
+    },
+    {
+      "id": "bo",
+      "zh": "老渔夫阿博",
+      "en": "Old Bo",
+      "role_zh": "渔夫，外婆的老朋友",
+      "role_en": "Fisherman and Grandma's old friend",
+      "color": "#C46A3B",
+      "bio_zh": "阿博在港口打了四十年鱼，嘴硬心软。他记得港口每一块木板的故事，却从不肯说自己为什么不再出远海。",
+      "bio_en": "Bo has fished here for forty years—gruff outside, soft inside. He knows the story behind every plank, but never says why he stopped sailing far out.",
+      "portrait": "art/characters/bo.svg"
+    },
+    {
+      "id": "mei",
+      "zh": "小梅",
+      "en": "Mei",
+      "role_zh": "茶馆老板，消息灵通",
+      "role_en": "Teahouse owner who hears every rumor",
+      "color": "#7BAF5A",
+      "bio_zh": "小梅开着港口唯一的茶馆，什么八卦都瞒不过她。她热心又爱操心，常常替人牵线搭桥。",
+      "bio_en": "Mei runs the harbor's only teahouse; no rumor escapes her. Warm and meddling, she loves playing matchmaker.",
+      "portrait": "art/characters/mei.svg"
+    },
+    {
+      "id": "jun",
+      "zh": "程骏",
+      "en": "Jun Cheng",
+      "role_zh": "开发商的代表，表面冷淡",
+      "role_en": "Developer's representative, cool on the surface",
+      "color": "#4A4A6A",
+      "bio_zh": "程骏奉命来评估港口的拆迁价值，西装笔挺、话不多。可他总在深夜一个人去灯塔下坐着。",
+      "bio_en": "Jun was sent to assess the harbor for demolition—sharp suit, few words. Yet he sits alone under the lighthouse late at night.",
+      "portrait": "art/characters/jun.svg"
+    },
+    {
+      "id": "nana",
+      "zh": "娜娜",
+      "en": "Nana",
+      "role_zh": "面包店学徒，梦想开自己的店",
+      "role_en": "Bakery apprentice who dreams of her own shop",
+      "color": "#E07A9A",
+      "bio_zh": "十九岁的娜娜每天四点起床揉面，乐观得像刚出炉的面包。她最大的愿望是在修好的码头开一家花与面包的小店。",
+      "bio_en": "Nineteen-year-old Nana kneads dough at 4 a.m., cheerful as fresh bread. Her dream: a little flower-and-bread shop on the rebuilt pier.",
+      "portrait": "art/characters/nana.svg"
+    }
+  ]
+}

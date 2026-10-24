@@ -1,0 +1,207 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "zh": "第一章：归港",
+      "en": "Chapter 1: Homecoming",
+      "summary_zh": "林岚回到海风港，发现老码头破败，决定修复它。",
+      "summary_en": "Lan returns to Breezeport, finds the pier in ruins, and decides to restore it.",
+      "renovations": [
+        {
+          "id": "r1",
+          "zh": "清理码头垃圾",
+          "en": "Clear the debris",
+          "cost_stars": 1,
+          "dialogue": [
+            {
+              "speaker": "lan",
+              "zh": "这里……比记忆里旧多了。",
+              "en": "This place... it's older than I remember."
+            },
+            {
+              "speaker": "bo",
+              "zh": "你外婆要是看见，准得骂人。",
+              "en": "Your grandma would've scolded everyone if she saw this."
+            }
+          ]
+        },
+        {
+          "id": "r2",
+          "zh": "修补栈桥木板",
+          "en": "Repair the boardwalk",
+          "cost_stars": 2,
+          "dialogue": [
+            {
+              "speaker": "bo",
+              "zh": "那块木板是你外婆亲手钉的。",
+              "en": "Your grandma nailed that plank herself."
+            },
+            {
+              "speaker": "lan",
+              "zh": "那我就照她的方法钉回去。",
+              "en": "Then I'll nail it back her way."
+            }
+          ]
+        },
+        {
+          "id": "r3",
+          "zh": "重开小梅茶馆",
+          "en": "Reopen Mei's teahouse",
+          "cost_stars": 2,
+          "dialogue": [
+            {
+              "speaker": "mei",
+              "zh": "终于有人肯回来了！喝茶，我请！",
+              "en": "Finally someone came back! Tea's on me!"
+            },
+            {
+              "speaker": "mei",
+              "zh": "对了，听说开发商派人来了……",
+              "en": "By the way, I hear the developer sent someone..."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zh": "第二章：西装来客",
+      "en": "Chapter 2: The Man in the Suit",
+      "summary_zh": "程骏到来评估拆迁，林岚必须证明港口的价值。",
+      "summary_en": "Jun arrives to assess demolition; Lan must prove the harbor is worth saving.",
+      "renovations": [
+        {
+          "id": "r4",
+          "zh": "搭建面包花店",
+          "en": "Build the bread & flower stall",
+          "cost_stars": 3,
+          "dialogue": [
+            {
+              "speaker": "nana",
+              "zh": "我的店！真的是我的店吗？",
+              "en": "My shop! Is it really mine?"
+            },
+            {
+              "speaker": "lan",
+              "zh": "你出面包，我出锤子。",
+              "en": "You bring the bread, I bring the hammer."
+            }
+          ]
+        },
+        {
+          "id": "r5",
+          "zh": "粉刷渔具仓库",
+          "en": "Paint the gear shed",
+          "cost_stars": 3,
+          "dialogue": [
+            {
+              "speaker": "jun",
+              "zh": "数据上，这里没有盈利可能。",
+              "en": "On paper, this place can't turn a profit."
+            },
+            {
+              "speaker": "lan",
+              "zh": "那你今天为什么排队买了娜娜的面包？",
+              "en": "Then why did you queue for Nana's bread today?"
+            }
+          ]
+        },
+        {
+          "id": "r6",
+          "zh": "种植码头花圃",
+          "en": "Plant the pier garden",
+          "cost_stars": 3,
+          "dialogue": [
+            {
+              "speaker": "mei",
+              "zh": "程先生昨晚又去灯塔了，一个人。",
+              "en": "Mr. Cheng went to the lighthouse again last night. Alone."
+            },
+            {
+              "speaker": "lan",
+              "zh": "灯塔……",
+              "en": "The lighthouse..."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "zh": "第三章：灯塔重亮",
+      "en": "Chapter 3: The Lighthouse Shines",
+      "summary_zh": "揭开阿博与程骏的往事，修好灯塔，港口迎来第一次夜市。",
+      "summary_en": "Bo's and Jun's shared past comes out; the lighthouse is repaired and the harbor holds its first night market.",
+      "renovations": [
+        {
+          "id": "r7",
+          "zh": "修复灯塔楼梯",
+          "en": "Fix the lighthouse stairs",
+          "cost_stars": 4,
+          "dialogue": [
+            {
+              "speaker": "bo",
+              "zh": "二十年前那场风暴，是你父亲把我拉上了船。",
+              "en": "In the storm twenty years ago, your father pulled me onto the boat."
+            },
+            {
+              "speaker": "jun",
+              "zh": "……所以我才想再看看这座灯塔。",
+              "en": "...That's why I wanted to see this lighthouse again."
+            }
+          ]
+        },
+        {
+          "id": "r8",
+          "zh": "点亮灯塔",
+          "en": "Relight the lighthouse",
+          "cost_stars": 4,
+          "dialogue": [
+            {
+              "speaker": "jun",
+              "zh": "报告我会重写。这个港口，不该拆。",
+              "en": "I'll rewrite the report. This harbor shouldn't be torn down."
+            },
+            {
+              "speaker": "lan",
+              "zh": "欢迎留下来，程骏。",
+              "en": "Welcome to stay, Jun."
+            }
+          ]
+        },
+        {
+          "id": "r9",
+          "zh": "举办海港夜市",
+          "en": "Hold the harbor night market",
+          "cost_stars": 5,
+          "dialogue": [
+            {
+              "speaker": "nana",
+              "zh": "面包卖光啦！",
+              "en": "Sold out of bread!"
+            },
+            {
+              "speaker": "mei",
+              "zh": "这才是我记得的海风港。",
+              "en": "Now this is the Breezeport I remember."
+            },
+            {
+              "speaker": "lan",
+              "zh": "这只是开始。",
+              "en": "This is only the beginning."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setting": {
+    "zh": "海风港——一座被遗忘的海边小港",
+    "en": "Breezeport, a forgotten seaside harbor"
+  },
+  "background_states": {
+    "before": "art/backgrounds/harbor_before.svg",
+    "after": "art/backgrounds/harbor_after.svg",
+    "note": "show after once r9 complete; intermediate steps can crossfade"
+  }
+}
