@@ -32,7 +32,9 @@ body{background:url(assets/backgrounds/harbor_before.svg) center/cover fixed,var
 
 body{background:var(--mh-color-bg)}
 .bg{position:fixed;inset:0;background:center/cover no-repeat;z-index:-1;transition:opacity 1.2s}
-#bgBefore{background-image:url(assets/backgrounds/harbor_before.svg)}#bgAfter{background-image:url(assets/backgrounds/harbor_after.svg);opacity:0}
+#bgBefore{background-image:url(assets/backgrounds/harbor_before.svg)}
+#bgMid{background-image:url(assets/backgrounds/harbor_mid.svg);opacity:0}
+#bgAfter{background-image:url(assets/backgrounds/harbor_after.svg);opacity:0}
 .modal{position:fixed;inset:0;background:rgba(43,43,58,.45);display:none;align-items:center;justify-content:center;z-index:20}
 .modal.show{display:flex}
 .sheet{background:#fff;border-radius:var(--mh-radius-lg);padding:14px;width:min(92vw,420px);box-shadow:var(--mh-shadow-card)}

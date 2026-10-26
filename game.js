@@ -69,9 +69,21 @@ function chapterIntro(id) {
 }
 
 // ---- renovation ----
+// 修复进度 p∈[0,1]：前半段旧港上淡入中景，后半段中景淡出、修复后淡入。底层旧港保持不透明。
+function renoBgOpacity(p) {
+  const t = Math.min(1, Math.max(0, Number.isFinite(p) ? p : 0));
+  return {
+    before: 1,
+    mid: t <= 0.5 ? t * 2 : (1 - t) * 2,
+    after: t <= 0.5 ? 0 : (t - 0.5) * 2
+  };
+}
 function renderBg() {
   const total = allRenos().length || 1;
-  $('bgAfter').style.opacity = (S.renovations.length / total).toFixed(3);
+  const o = renoBgOpacity(S.renovations.length / total);
+  $('bgBefore').style.opacity = o.before.toFixed(3);
+  $('bgMid').style.opacity = o.mid.toFixed(3);
+  $('bgAfter').style.opacity = o.after.toFixed(3);
 }
 function renderReno() {
   const c = chapterOf(S.chapter); const list = $('renoList'); list.innerHTML = '';
